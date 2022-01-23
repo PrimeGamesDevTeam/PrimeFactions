@@ -1,0 +1,4 @@
+name: PrimeFactions
+version: '${project.version}'
+main: net.primegames.primefactions.PrimeFactions
+api-version: 1.18
