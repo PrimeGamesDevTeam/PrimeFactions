@@ -6,13 +6,18 @@ import net.primegames.primefactions.settings.FactionsSettings;
 import net.primegames.server.GameMode;
 import net.primegames.server.GameServerSettings;
 import net.primegames.server.GameServerStatus;
-import net.primegames.utils.LoggerUtils;
+import org.bukkit.Location;
 import org.bukkit.util.Vector;
 
 public class ClassicFactionsSettings extends FactionsSettings {
 
     public ClassicFactionsSettings(@NonNull PrimePlugin plugin) {
         super(plugin);
+    }
+
+    @Override
+    public Location getFactionsPowerLbLocation() {
+        return new Location(getPlugin().getServer().getWorld("Factions"), 431.5, 68.7, 1595.5);
     }
 
     @Override

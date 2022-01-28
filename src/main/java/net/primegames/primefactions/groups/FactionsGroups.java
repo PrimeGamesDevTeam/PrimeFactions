@@ -24,21 +24,21 @@ import java.util.List;
 
 public enum FactionsGroups {
 
-    OWNER("owner", GroupTier.OWNER, "•&l&c{faction_rank}&3{faction}&f〚&9Owner&f〛&3{player}&e: &b{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&l&9Owner&f]&3{player}"),
-    CHIEF("chief", GroupTier.CHIEF, "•&l&c{faction_rank}&3{faction}&f〚&aChief&f〛&5{player}&6: &a{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&aChief&f]&5{player}"),
-    LOS("los", GroupTier.LOS, "•&l&c{faction_rank}&3{faction}&f〚&aLOS&f〛&a{player}&6: &a{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&aLOS&f]&d{player}"),
-    ADMIN("admin", GroupTier.ADMIN, "•&l&c{faction_rank}&3{faction}&f〚&3Admin&f〛{player}&7: &4{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&3Admin&f]&9{player}"),
-    MOD("mod", GroupTier.MOD, "•&l&c{faction_rank}&3{faction}&f〚&3MOD&f〛{player}&7: &4{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&3MOD&a&f]{player}"),
-    Trainee("Trainee", GroupTier.TRAINEE, "•&l&c{faction_rank}&3{faction}&f〚&eTrainee&f〛{player}&7: &e{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&eTrainee&f]&e{player}"),
+    OWNER("owner", GroupTier.OWNER, "&l&c{faction_rank}&3{faction}&f〚&9Owner&f〛&3{player}&e: &b{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&l&9Owner&f]&3{player}"),
+    CHIEF("chief", GroupTier.CHIEF, "&l&c{faction_rank}&3{faction}&f〚&aChief&f〛&5{player}&6: &a{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&aChief&f]&5{player}"),
+    LOS("los", GroupTier.LOS, "&l&c{faction_rank}&3{faction}&f〚&aLOS&f〛&a{player}&6: &a{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&aLOS&f]&d{player}"),
+    ADMIN("admin", GroupTier.ADMIN, "&l&c{faction_rank}&3{faction}&f〚&3Admin&f〛{player}&7: &4{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&3Admin&f]&9{player}"),
+    MOD("mod", GroupTier.MOD, "&l&c{faction_rank}&3{faction}&f〚&3MOD&f〛{player}&7: &4{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&3MOD&a&f]{player}"),
+    Trainee("Trainee", GroupTier.TRAINEE, "&l&c{faction_rank}&3{faction}&f〚&eTrainee&f〛{player}&7: &e{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&eTrainee&f]&e{player}"),
     MORTAL("mortal", GroupTier.TIER_0, "&c{faction_rank}&3{faction}&f〚&7Mortal&f〛{player}&7: {message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&7Mortal&f]{player}"),
     VOTER("voter", GroupTier.TIER_1, "&c{faction_rank}&3{faction}&f〚&aVoter&f〛{player}&7: &f{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&aVoter&f]&7{player}"),
     ARES("ares", GroupTier.TIER_2, "&c{faction_rank}&3{faction}&f〚&cAres&f〛{player}&7: &c{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&cAres&f]&c{player}"),
     IRIS("iris", GroupTier.TIER_3, "&c{faction_rank}&3{faction}&f〚&3Iris&f〛{player}&7: &3{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&3Iris&f]&d{player}"),
     POSEIDON("poseidon", GroupTier.TIER_4, "&c{faction_rank}&3{faction}&f〚&6Poseidon&f〛{player}&7: &l&6{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&6Poseidon&f]&4{player}"),
-    BUILDER("builder", GroupTier.TIER_5, "•&l&c{faction_rank}&3{faction}&f〚&6Builder&f〛{player}&7: &6{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&6Builder&f]&6{player}"),
-    HADES("hades", GroupTier.TIER_6, "•&l&c{faction_rank}&3{faction}&f〚&5Hades&f〛{player}&7: &5{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&5Hades&f]&4{player}"),
-    ZEUS("zeus", GroupTier.TIER_8, "•&l&c{faction_rank}&3{faction}&f〚&bZeus&f〛{player}&7: &b{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&bZeus&f]&6{player}"),
-    TITAN("titan", GroupTier.TIER_9, "•&l&c{faction_rank}&3{faction}&f〚&aTitan&f〛{player}&7: &a{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&a&lTitan&r&f]&a{player}&r");
+    BUILDER("builder", GroupTier.TIER_5, "&l&c{faction_rank}&3{faction}&f〚&6Builder&f〛{player}&7: &6{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&6Builder&f]&6{player}"),
+    HADES("hades", GroupTier.TIER_6, "&l&c{faction_rank}&3{faction}&f〚&5Hades&f〛{player}&7: &5{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&5Hades&f]&4{player}"),
+    ZEUS("zeus", GroupTier.TIER_8, "&l&c{faction_rank}&3{faction}&f〚&bZeus&f〛{player}&7: &b{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&bZeus&f]&6{player}"),
+    TITAN("titan", GroupTier.TIER_9, "&l&c{faction_rank}&3{faction}&f〚&aTitan&f〛{player}&7: &a{message}", "•&c{faction_rank}&3{faction}{faction_ln}&f[&a&lTitan&r&f]&a{player}&r");
 
     @Getter
     private final String name;
@@ -171,8 +171,8 @@ public enum FactionsGroups {
         LuckPerms luckPerms = PrimeFactions.getInstance().getLuckPerms();
         User user = luckPerms.getUserManager().getUser(player.getUniqueId());
         if (user != null) {
-            for (FactionsGroups factionsGroup : FactionsGroups.values()) {
-                if (user.getPrimaryGroup().equals(factionsGroup.getName())) {
+            for (FactionsGroups factionsGroup : values()) {
+                if (!factionsGroup.equals(MORTAL) && user.getPrimaryGroup().equals(factionsGroup.getName())) {
                     return factionsGroup;
                 }
             }
