@@ -17,10 +17,9 @@ public class FactionsPowerLeaderboard extends Leaderboard {
     public void scheduleUpdate() {
         ArrayList<Faction> factions = Factions.getInstance().getAllFactions();
         int size = Math.min(factions.size(), 10);
-        factions.sort((f1, f2) -> Integer.compare(f2.getPowerRounded(), f1.getPowerRounded()));
         Map<Integer, String> values = new HashMap<>(10);
         for (int i = 0; i < size; i++) {
-            values.put(i, factions.get(i).getId() + ": " + factions.get(i).getPowerRounded());
+            values.put(factions.get(i).getPowerRounded(), factions.get(i).getTag());
         }
         updateValues(values, "ℙ");
     }

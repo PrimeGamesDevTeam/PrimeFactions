@@ -22,7 +22,7 @@ public class ClassicFactionsSettings extends FactionsSettings {
 
     @Override
     public @NonNull GameServerSettings getServerSettings() {
-        return new GameServerSettings("Class Factions", GameMode.FACTIONS, GameServerStatus.PRODUCTION, "primegames.net", 19242, null);
+        return new GameServerSettings("Classic Factions", GameMode.FACTIONS, GameServerStatus.ALPHA, "primegames.net", 19242, null);
     }
 
     @Override

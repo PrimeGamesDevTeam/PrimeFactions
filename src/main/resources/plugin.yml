@@ -2,10 +2,11 @@ name: PrimeFactions
 version: '${project.version}'
 main: net.primegames.primefactions.PrimeFactions
 api-version: 1.18
-load: STARTUP
+load: POSTWORLD
 depend:
   - LuckPerms
   - floodgate
   - Geyser-Spigot
   - Vault
   - Essentials
+  - HolographicDisplays
