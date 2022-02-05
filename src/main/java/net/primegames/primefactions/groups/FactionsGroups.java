@@ -90,10 +90,10 @@ public enum FactionsGroups {
         FPlayer me = FPlayers.getInstance().getByPlayer(player);
         String chatFormat = this.chatFormat;
         Faction factions = me.getFaction();
-        if (factions == null) {
+        if (factions == null || factions.isWilderness()) {
             chatFormat = chatFormat.replace("{faction}", "").replace("{faction_rank}", "");
         } else {
-            chatFormat = chatFormat.replace("{faction}", factions.getTag()).replace("{faction_rank}", me.getRole().getPrefix());
+                chatFormat = chatFormat.replace("{faction}", factions.getTag()).replace("{faction_rank}", me.getRole().getPrefix());
         }
         chatFormat = chatFormat.replace("{player}", player.getName());
         chatFormat = chatFormat.replace("{message}", message);

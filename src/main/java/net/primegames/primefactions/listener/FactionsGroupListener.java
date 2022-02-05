@@ -3,6 +3,7 @@ package net.primegames.primefactions.listener;
 import net.primegames.PrimeGames;
 import net.primegames.event.player.CorePlayerLoadedEvent;
 import net.primegames.primefactions.groups.FactionsGroups;
+import net.primegames.utils.LoggerUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -31,7 +32,8 @@ public class FactionsGroupListener implements Listener {
     public void onChat(AsyncPlayerChatEvent event) {
         FactionsGroups group = FactionsGroups.getGroupFor(event.getPlayer());
         event.setCancelled(true);
-        Bukkit.broadcastMessage(group.getChatFormatFor(event.getPlayer(), event.getMessage()));
+        String message = group.getChatFormatFor(event.getPlayer(), event.getMessage());
+        Bukkit.broadcastMessage(message);
     }
 
 }

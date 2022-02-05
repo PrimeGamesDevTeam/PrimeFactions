@@ -22,7 +22,7 @@ public class ClassicFactionsSettings extends FactionsSettings {
 
     @Override
     public @NonNull GameServerSettings getServerSettings() {
-        return new GameServerSettings("Classic Factions", GameMode.FACTIONS, GameServerStatus.ALPHA, "primegames.net", 19242, null);
+        return new GameServerSettings("Fac_advanced", GameMode.FACTIONS, GameServerStatus.ALPHA, "primegames.net", 19332, "https://primegames.net/servericons/server/Factions.png");
     }
 
     @Override
@@ -34,4 +34,5 @@ public class ClassicFactionsSettings extends FactionsSettings {
     public @NonNull Vector getLobbySpawn() {
         return new Vector(0, 64, 0);
     }
+
 }
