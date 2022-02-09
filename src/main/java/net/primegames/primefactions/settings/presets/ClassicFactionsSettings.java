@@ -34,5 +34,4 @@ public class ClassicFactionsSettings extends FactionsSettings {
     public @NonNull Vector getLobbySpawn() {
         return new Vector(0, 64, 0);
     }
-
 }

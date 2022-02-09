@@ -9,9 +9,9 @@ import net.primegames.primefactions.commands.LobbyCommand;
 import net.primegames.primefactions.leaderboard.FactionsPowerLeaderboard;
 import net.primegames.primefactions.listener.FactionsGroupListener;
 import net.primegames.primefactions.listener.NoRainListener;
+import net.primegames.primefactions.listener.VoteClaimedListener;
 import net.primegames.primefactions.settings.FactionsSettings;
 import net.primegames.primefactions.settings.presets.ClassicFactionsSettings;
-import net.primegames.voucherapi.VouchersAPI;
 import org.bukkit.plugin.PluginManager;
 
 public final class PrimeFactions extends PrimePlugin {
@@ -20,12 +20,14 @@ public final class PrimeFactions extends PrimePlugin {
     private static PrimeFactions instance;
     @Getter
     private LuckPerms luckPerms;
+    @Getter
+    private FactionsSettings factionsSettings;
 
 
     @Override
     protected void onInternalLoad() {
         instance = this;
-        setServerSettings(new ClassicFactionsSettings(this));
+        setServerSettings(factionsSettings = new ClassicFactionsSettings(this));
     }
 
     @Override
@@ -44,10 +46,7 @@ public final class PrimeFactions extends PrimePlugin {
     protected void registerListeners(PluginManager pluginManager) {
         pluginManager.registerEvents(new FactionsGroupListener(), this);
         pluginManager.registerEvents(new NoRainListener(), this);
-    }
-
-    public FactionsSettings getFactionsSettings(){
-        return (FactionsSettings) super.getServerSettings();
+        pluginManager.registerEvents(new VoteClaimedListener(), this);
     }
 
 }
