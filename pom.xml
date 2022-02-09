@@ -76,7 +76,7 @@
         <dependency>
             <groupId>net.primegames</groupId>
             <artifactId>primegames</artifactId>
-            <version>1.429</version>
+            <version>1.440</version>
         </dependency>
         <dependency>
             <groupId>net.luckperms</groupId>
