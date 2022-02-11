@@ -51,19 +51,14 @@ public enum FactionsGroup {
     private final String chatFormat;
 
     FactionsGroup(String name, GroupTier groupTier, String chatFormat, String displayName) {
-        LoggerUtils.info("1");
         this.tier = groupTier;
         this.name = name;
         Group group = PrimeFactions.getInstance().getLuckPerms().getGroupManager().getGroup(name);
-        LoggerUtils.info("2");
         if (group != null) {
-            LoggerUtils.info("3");
             this.group = group;
         } else {
-            LoggerUtils.info("4");
             throw new IllegalArgumentException("Group named: " + name + " does not exist in LuckPerms!");
         }
-        LoggerUtils.info("5");
         this.displayName = displayName;
         this.chatFormat = chatFormat;
     }
