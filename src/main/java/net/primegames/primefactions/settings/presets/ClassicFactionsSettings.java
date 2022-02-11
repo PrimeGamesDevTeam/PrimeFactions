@@ -20,7 +20,7 @@ public class ClassicFactionsSettings extends FactionsSettings {
 
     @Override
     public Location getFactionsPowerLbLocation() {
-        return new Location(getPlugin().getServer().getWorld("Factions"), 431.5, 68.7, 1595.5);
+        return new Location(getPlugin().getServer().getWorld("Factions"), 431.5, 79, 1677.5);
     }
 
     @Override
