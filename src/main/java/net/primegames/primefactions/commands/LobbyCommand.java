@@ -17,7 +17,7 @@ public class LobbyCommand extends Command {
     @Override
     public boolean execute(@NotNull CommandSender sender, @NotNull String commandLabel, @NotNull String[] args) {
         if (sender instanceof Player player) {
-            player.teleport(PrimeFactions.getInstance().getFactionsSettings().getFactionsPowerLbLocation());
+            player.teleport(PrimeFactions.getInstance().getFactionsSettings().getLobbySpawnLocation());
             return true;
         }
         return false;
