@@ -10,7 +10,6 @@ import net.primegames.server.GameServerStatus;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
-import org.bukkit.util.Vector;
 
 public class ClassicFactionsSettings extends FactionsSettings {
 
@@ -20,22 +19,22 @@ public class ClassicFactionsSettings extends FactionsSettings {
 
     @Override
     public Location getFactionsPowerLbLocation() {
-        return new Location(getPlugin().getServer().getWorld("Factions"), 431.5, 79, 1677.5);
+        return new Location(getPlugin().getServer().getWorld("warzone"), 2081.5, 67, 2552.5);
     }
 
     @Override
     public @NonNull GameServerSettings getServerSettings() {
-        return new GameServerSettings("Fac_advanced", GameMode.FACTIONS, GameServerStatus.ALPHA, "primegames.net", 19332, "https://primegames.net/servericons/server/Factions.png");
+        return new GameServerSettings("Fac_advanced", GameMode.FACTIONS, GameServerStatus.BETA, "primegames.net", 19332, "https://primegames.net/servericons/server/Factions.png");
     }
 
     @Override
     public @NonNull String getLobbyWorldName() {
-        return "Factions";
+        return "warzone";
     }
 
     @Override
-    public @NonNull Vector getLobbySpawn() {
-        return new Vector(0, 64, 0);
+    public @NonNull Location getLobbySpawnLocation() {
+        return new Location(getPlugin().getServer().getWorld(getLobbyWorldName()), 2081.5, 67, 2593.5, 180, -10.5f);
     }
 
     @Override

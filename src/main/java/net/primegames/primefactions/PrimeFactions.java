@@ -15,12 +15,9 @@ import net.primegames.primefactions.listener.FactionsGroupListener;
 import net.primegames.primefactions.listener.NoRainListener;
 import net.primegames.primefactions.settings.FactionsSettings;
 import net.primegames.primefactions.settings.presets.ClassicFactionsSettings;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Objects;
 
 public final class PrimeFactions extends PrimePlugin {
 
@@ -66,7 +63,7 @@ public final class PrimeFactions extends PrimePlugin {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        componentManager.register(new ForceSpawnComponent(this, Objects.requireNonNull(Bukkit.getWorld(factionsSettings.getLobbyWorldName())).getSpawnLocation()));
+        componentManager.register(new ForceSpawnComponent(this, getFactionsSettings().getLobbySpawnLocation()));
     }
 
 }
