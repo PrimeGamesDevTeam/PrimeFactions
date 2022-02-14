@@ -3,6 +3,9 @@ package net.primegames.primefactions;
 import lombok.Getter;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
+import net.primegames.bedrockforms.ShopForm;
+import net.primegames.bedrockforms.WarpsForm;
+import net.primegames.commands.BedrockPlayerCommandHandler;
 import net.primegames.components.ComponentManager;
 import net.primegames.components.forcespace.ForceSpawnComponent;
 import net.primegames.components.vote.VoteComponent;
@@ -15,7 +18,10 @@ import net.primegames.primefactions.listener.FactionsGroupListener;
 import net.primegames.primefactions.listener.NoRainListener;
 import net.primegames.primefactions.settings.FactionsSettings;
 import net.primegames.primefactions.settings.presets.ClassicFactionsSettings;
+import net.primegames.utils.BedrockPlayerCallback;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
+import org.geysermc.floodgate.util.DeviceOs;
 
 import java.io.IOException;
 
@@ -35,6 +41,19 @@ public final class PrimeFactions extends PrimePlugin {
     protected void onInternalLoad() {
         instance = this;
         setServerSettings(factionsSettings = new ClassicFactionsSettings(this));
+        BedrockPlayerCommandHandler.handle("/shop", new BedrockPlayerCallback() {
+            @Override
+            public void call(Player player) {
+                ShopForm.init(player);
+                ignore(DeviceOs.UWP);
+            }
+        });
+        BedrockPlayerCommandHandler.handle("/warps", new BedrockPlayerCallback() {
+            @Override
+            public void call(Player player) {
+                WarpsForm.init(player);
+            }
+        });
     }
 
     @Override
